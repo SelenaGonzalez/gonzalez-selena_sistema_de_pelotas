@@ -3,5 +3,14 @@ function setup() {
 }
 
 function draw() {
-  circle(mouseX, mouseY, 20);
+  background(163, 99, 252);
+  noStroke();
+  let anchura = 20;
+  let gap = 50;
+
+  for (let X = 10; X < windowWidth; X += anchura + gap) {
+    for (let y = 10; y < windowHeight; y += anchura + gap) {
+      square(X, y, anchura);
+    }
+  }
 }

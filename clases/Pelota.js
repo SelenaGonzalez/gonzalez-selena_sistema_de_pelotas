@@ -4,7 +4,7 @@ class Pelota {
     this.posY = random(50, 70);
     this.velX = random(-1, 1);
     this.velY = 0;
-    (this.acelY = 0), 98;
+    this.acelY = 0.98;
 
     this.diam = int(random(5, 50));
     this.rad = this.diam / 2;
