@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(163, 99, 252);
+  background(200, 50, 100);
   for (let i = 0; i < NP; i++) {
     pelotas[i].update(windowHeight);
     pelotas[i].display();

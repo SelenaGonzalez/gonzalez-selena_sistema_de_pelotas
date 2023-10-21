@@ -1,31 +1,27 @@
 class Pelota {
   constructor() {
-    this.posX = random(50, windowWidth - 50);
-    this.posY = random(10, 130);
-    this.velX = random(-20, 20);
-    this.velY = 0.0;
-    this.acelY = 0.98;
+    this.posX = random(200, windowWidth - 60);
+    this.posY = random(100, 190);
+    this.velX = random(-1, 1);
+    this.velY = 0;
+    this.acelY = random(0.2, 0.98);
 
-    this.diam = int(random(5, 100));
+    this.diam = int(random(5, 60));
     this.rad = this.diam / 2;
-    this.colorin = color(255, random(100, 255), random(0, 150));
+    //noStroke();
+    this.colorin = color(random(100, 255), 255, random(0, 150));
+    rectMode(CENTER);
+    print("Hola estoy vive");
   }
+
   update(_piso) {
     if (this.posY + this.rad <= _piso) {
       this.velY += this.acelY;
       this.posY += this.velY;
     } else {
-      this.velY *= -1.0;
+      this.velY *= -1;
       this.posY += this.velY;
     }
-
-    if (this.posX > windowWidth) {
-      this.velX *= -1;
-    }
-    if (this.posX < 0) {
-      this.velX *= -1;
-    }
-    this.posX += this.velX;
   }
 
   display() {
